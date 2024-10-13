@@ -14,7 +14,7 @@ function loadGoogleMapsAPI(callback) {
 }
 
 function initMap() {
-    const initialLocation = { lat: 35.6762, lng: 139.6503 }; // Tokyo
+    const initialLocation = { lat: 54.5973, lng: -5.9301 }; // Tokyo
 
     map = new google.maps.Map(document.getElementById('map'), {
         center: initialLocation,
