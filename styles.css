@@ -1,0 +1,186 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column; /* Change to column to stack elements */
+    align-items: center; /* Center align items */
+    height: 100vh; /* Full viewport height */
+    background-color: #f4f4f4;
+    overflow-y: auto; /* Enable body scrolling */
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    padding: 10px; /* Add padding for better spacing */
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+}
+
+#header {
+    padding: 10px;
+    background: #f0f0f0;
+    margin-bottom: 10px; /* Space below the header */
+}
+
+h1 {
+    text-align: center;
+    font-size: 24px; /* Set a reasonable font size for the title */
+    margin-bottom: 20px; /* Space below the title */
+}
+
+#map {
+    width: 100%;
+    height: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    flex: 1; /* Take up available space */
+    min-height: 300px; /* Ensure a minimum height for the map */
+}
+
+#search-box {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+#saved-addresses, #trip-list {
+    max-height: none; /* Remove height restriction to display all items */
+    background-color: white; /* Background color for better visibility */
+    padding: 10px; /* Add padding for better appearance */
+    border-radius: 5px; /* Round corners for a better look */
+    margin-bottom: 20px; /* Space below the lists */
+}
+
+ul {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+ul li {
+    background-color: #e7e7e7;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.trip-form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+#trip-list {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+#trip-list li {
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+
+#total-distance {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.delete-button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 10px;
+    cursor: pointer;
+}
+
+.delete-button:hover {
+    background-color: #c0392b;
+}
+
+.address {
+    display: block; /* Ensure address is displayed as a block element */
+    font-weight: bold; /* Make it stand out */
+}
+
+.description {
+    display: inline-block; /* Change to inline-block to fit the size of the text */
+    font-style: italic; /* Italicize the description */
+    color: gray; /* Change color for better visibility */
+    margin-top: 5px; /* Add space above the description */
+    border: 1px dashed transparent; /* Optional dashed border for better interaction feedback */
+    padding: 2px; /* Add padding for comfort */
+    cursor: pointer; /* Change cursor to pointer for better UX */
+}
+
+#saved-addresses li {
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    margin: 10px 0; /* Add some spacing between list items */
+    cursor: pointer;
+}
+
+#saved-addresses li:hover {
+    background-color: #dddddd;
+}
+
+#saved-addresses span {
+    width: 100%; /* Ensure the span takes the full width */
+}
+
+#saved-addresses span[contenteditable="true"] {
+    cursor: pointer; /* Show a text cursor when hovering over the editable description */
+    padding: 4px; /* Add padding for better appearance */
+    border: 1px solid transparent; /* Optional border for better interaction feedback */
+    transition: border 0.2s; /* Smooth transition for border */
+}
+
+#saved-addresses span[contenteditable="true"]:focus {
+    border: 1px solid #007BFF; /* Change border color when focused */
+    outline: none; /* Remove the default outline */
+}
+
+#saved-addresses .delete-button {
+    margin-top: 5px; /* Add some space above the delete button */
+    align-self: flex-start; /* Aligns the button to the start of the flex container */
+    padding: 5px 10px; /* Add some padding for better appearance */
+    background-color: #ff4d4d; /* Red background for the delete button */
+    color: white; /* White text color */
+    border: none; /* Remove default border */
+    cursor: pointer; /* Show a pointer on hover */
+    border-radius: 4px; /* Slightly round the corners */
+}
+
+#saved-addresses .delete-button:hover {
+    background-color: #ff1a1a; /* Darker red on hover */
+}

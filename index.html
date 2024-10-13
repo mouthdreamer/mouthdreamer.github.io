@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Milage Machine</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Shauna's Milage Machine</h1>
+
+        <!-- Search Box for Addresses -->
+        <input id="search-box" type="text" placeholder="Search for an address" />
+        
+        <div id="map"></div>
+        
+        <div class="address-form">
+            <h2>Saved Addresses</h2>
+            <ul id="saved-addresses"></ul>
+            <button onclick="clearAddresses()">Clear All Addresses</button>
+        </div>
+
+        <div class="trip-form">
+            <h2>Trip Planner</h2>
+            <ul id="trip-list"></ul>
+            <p id="total-distance">Total Distance: 0.00 km (0.00 miles)</p>
+            <button onclick="clearTrip()">Clear Trip</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
