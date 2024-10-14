@@ -1,0 +1,89 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #eaeaea;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    background-color: white;
+}
+
+header {
+    background: #4a90e2;
+    color: white;
+    padding: 15px;
+    border-radius: 10px 10px 0 0;
+}
+
+header h1 {
+    margin: 0;
+}
+
+button {
+    background-color: #ffffff;
+    border: 1px solid #4a90e2;
+    color: #4a90e2;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover {
+    background-color: #4a90e2;
+    color: white;
+}
+
+#calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.day {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.day:hover {
+    background: #f1f1f1;
+}
+
+.day-name {
+    font-weight: bold;
+    background: #4a9
+
+}
+
+.modal-body {
+    transition: padding 0.5s ease;
+    overflow-y: auto;
+}
+
+.modal {
+    z-index: 1050;
+}
+
+#newVisitorContainer {
+    padding: 10px;
+    border-radius: 0.25rem;
+    background-color: cornsilk;
+    display: block; /* Change to block to make it visible */
+    opacity: 0; /* Fully visible */
+    max-height: 400px; /* Ensure it has a defined height */
+    overflow: hidden; /* Prevent overflow */
+    transition: max-height 0.5s ease, opacity 0.5s ease; /* Smooth transition */
+}
+
+#visitNumberInput {
+    float: right;
+    display: flex;
+    width: 30%; /* Adjust as needed */
+}
+

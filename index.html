@@ -10,6 +10,13 @@
     <div class="container">
         <h1>Shauna's Milage Machine!</h1>
 
+        <div id="sidebar">
+            <div id="calendar">
+                <h2>Calendar</h2>
+                <ul id="calendar-dates"></ul>
+            </div>
+        </div>
+        
         <!-- Search Box for Addresses -->
         <input id="search-box" type="text" placeholder="Search for an address" />
         
@@ -26,6 +33,7 @@
             <ul id="trip-list"></ul>
             <p id="total-distance">Total Distance: 0.00 km (0.00 miles)</p>
             <button onclick="clearTrip()">Clear Trip</button>
+            <button onclick="saveTrip()">Save Trip</button>
         </div>
     </div>
 

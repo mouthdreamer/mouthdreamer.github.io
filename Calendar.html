@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="Calendar.css">
+</head>
+<body>
+    <div class="container mt-4">
+        <h2 id="monthDisplay" class="text-center"></h2>
+        <div class="row" id="calendar"></div>
+        <div class="text-center mt-3">
+            <button id="prevMonth" class="btn btn-primary">Previous Month</button>
+            <button id="nextMonth" class="btn btn-primary">Next Month</button>
+        </div>
+    </div>
+
+    <!-- Modal -->
+   <div
+       class="modal fade"
+       id="mainModal"
+       tabindex="-1"
+       role="dialog"
+       aria-labelledby="mainModalLabel"
+       aria-hidden="true">
+       <div class="modal-dialog" role="document">
+           <div class="modal-content">
+               <div class="modal-header">
+                   <h5 class="modal-title" id="mainModalLabel">Select Visitor</h5>
+                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                       <span aria-hidden="true">&times;</span>
+                   </button>
+               </div>
+               <div class="modal-body">
+                   <form id="visitForm">
+                       <div class="form-group">
+                       <div class="container">
+                           <div class="row mb-3">
+                               <div class="col">
+                           <div class="input-group ml-1">
+                               <input
+                                   type="number"
+                                   class="form-control"
+                                   id="visitNumberInput"
+                                   placeholder="0"
+                                   style="max-width: 75px; border-top-right-radius: 0; border-bottom-right-radius: 0" />
+
+                               <div class="input-group-append">
+                                   <span
+                                       class="input-group-text"
+                                       id="visitNumberDisplay"
+                                       style="min-width: 60px; border-top-left-radius: 0; border-bottom-left-radius: 0">
+                                       <!-- This value can be set by your code -->
+                                       T-18
+                                   </span>
+                               </div>
+                           </div>
+                                </div>
+                                <div class="col">
+                                     <input type="date" class="form-control" id="visitDate" required>
+                               </div>
+                        </div>
+                           <div class="row">
+                               <div class=col-10>
+                           <select class="form-control" id="visitorSelect" required>
+                               <option value="" disabled selected>Select a visitor</option>
+                               <option value="new">... Add new visitor</option>
+                               <!-- Existing visitors will be populated here -->
+                           </select>
+                            </div>
+                            <div class=col-2>
+                                                          <input
+                                   type="color"
+                                   class="form-control form-control-color"
+                                   id="visitorColor"
+                                   title="Choose a color"/>
+                        </div>
+                        </div>
+                       </div>
+                    </div>
+
+                       <!-- Hidden input for new visitor (this will show dynamically) -->
+                       <div
+                           id="newVisitorContainer"
+                           class="form-group"
+                           style="
+                               display: none;
+                               opacity: 0;
+                               max-height: 0;
+                               overflow: hidden;
+                               transition:
+                                   max-height 0.5s ease,
+                                   opacity 0.5s ease;
+                           ">
+                           <div class="input-group mt-2">
+                               <input
+                                   type="text"
+                                   class="form-control"
+                                   id="newVisitorName"
+                                   style="width: 300px"
+                                   placeholder="Add a new client" />
+                               <div class="input-group-append">
+                                   <button type="button" class="btn btn-primary" id="addNewVisitorBtn">Add</button>
+                               </div>
+                           </div>
+                       </div>
+                   </form>
+                <div class="modal-footer">
+                    <button type="button" id="saveVisit" class="btn btn-success">Save Visit</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+        </div>
+    </div>
+</div>
+    </div>
+
+    
+    <div id="contextMenu" style="display: none; position: absolute; background: white; border: 1px solid #ccc; z-index: 1000;">
+    <ul style="list-style: none; margin: 0; padding: 10px;">
+        <li id="deleteVisitItem">Delete Visit</li>
+    </ul>
+</div>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="Calendar.js"></script>
+</body>
+</html>
